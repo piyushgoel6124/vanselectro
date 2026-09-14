@@ -158,5 +158,5 @@ function openProfile(idx) {
 function openOppModal() {
   closeModal();
   document.getElementById('modal-overlay').style.display = 'block';
-  document.getElementById('opp-modal').style.display = 'flex';
+  document.getElementById('opp-modal').style.display = 'block';
 }

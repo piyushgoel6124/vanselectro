@@ -54,8 +54,22 @@
       <!-- Panel 1: PRODUCTS -->
       <section class="panel-card">
         <h2>PRODUCTS</h2>
-        <div style="flex: 1; display: flex; align-items: center; justify-content: center;">
-          <img src="img/prods.png" alt="Products" style="width: 100%; height: auto; max-height: 280px; object-fit: contain; border-radius: 12px;">
+        <div class="products-banner-wrapper">
+          <img src="img/prods.png" alt="Products" class="products-img">
+          <div class="play-hotspot-grid">
+            <button class="play-btn-circle" onclick="openVideoModal(0)" title="Play VCB WSR Video" aria-label="Play VCB WSR Video">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#ffffff"><polygon points="6,3 20,12 6,21"></polygon></svg>
+            </button>
+            <button class="play-btn-circle" onclick="openVideoModal(1)" title="Play VCB OBR Video" aria-label="Play VCB OBR Video">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#ffffff"><polygon points="6,3 20,12 6,21"></polygon></svg>
+            </button>
+            <button class="play-btn-circle" onclick="openVideoModal(2)" title="Play VANS RMU Video" aria-label="Play VANS RMU Video">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#ffffff"><polygon points="6,3 20,12 6,21"></polygon></svg>
+            </button>
+            <button class="play-btn-circle" onclick="openVideoModal(3)" title="Play VANS VI Video" aria-label="Play VANS VI Video">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#ffffff"><polygon points="6,3 20,12 6,21"></polygon></svg>
+            </button>
+          </div>
         </div>
       </section>
 
@@ -126,6 +140,55 @@
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
     </button>
     <img src="img/vansopp.jpg" alt="VANS Opportunity Plan" style="width: 100vw; height: 100vh; object-fit: contain; display: block; margin: 0; padding: 0; background: #ffffff;">
+  </div>
+
+  <!-- Product Video Modals -->
+  <div class="modal-dialog video-modal" id="video-modal-0">
+    <span class="close-modal" onclick="closeModal()">&times;</span>
+    <h2>1. VCB WSR with Overlay</h2>
+    <div class="video-container">
+      <video controls controlsList="nodownload" preload="metadata">
+        <source src="video/1. VCB WSR with overlay.mov" type="video/mp4">
+        <source src="video/1. VCB WSR with overlay.mov" type="video/quicktime">
+        Your browser does not support playing this video.
+      </video>
+    </div>
+  </div>
+
+  <div class="modal-dialog video-modal" id="video-modal-1">
+    <span class="close-modal" onclick="closeModal()">&times;</span>
+    <h2>2. VCB OBR with Overlay</h2>
+    <div class="video-container">
+      <video controls controlsList="nodownload" preload="metadata">
+        <source src="video/2. VCB OBR with overlay.mov" type="video/mp4">
+        <source src="video/2. VCB OBR with overlay.mov" type="video/quicktime">
+        Your browser does not support playing this video.
+      </video>
+    </div>
+  </div>
+
+  <div class="modal-dialog video-modal" id="video-modal-2">
+    <span class="close-modal" onclick="closeModal()">&times;</span>
+    <h2>3. VANS RMU with Overlay</h2>
+    <div class="video-container">
+      <video controls controlsList="nodownload" preload="metadata">
+        <source src="video/3. VANS RMU with overlay.mov" type="video/mp4">
+        <source src="video/3. VANS RMU with overlay.mov" type="video/quicktime">
+        Your browser does not support playing this video.
+      </video>
+    </div>
+  </div>
+
+  <div class="modal-dialog video-modal" id="video-modal-3">
+    <span class="close-modal" onclick="closeModal()">&times;</span>
+    <h2>4. VANS Vacuum Interrupter (VI) with Overlay</h2>
+    <div class="video-container">
+      <video controls controlsList="nodownload" preload="metadata">
+        <source src="video/4. VANS VI with overlay.mov" type="video/mp4">
+        <source src="video/4. VANS VI with overlay.mov" type="video/quicktime">
+        Your browser does not support playing this video.
+      </video>
+    </div>
   </div>
 
   <!-- Director Profile 0: Abhishek Saraff -->

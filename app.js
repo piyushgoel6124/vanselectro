@@ -142,6 +142,10 @@ function toggleHighlights() {
 function closeModal() {
   document.getElementById('modal-overlay').style.display = 'none';
   document.querySelectorAll('.modal-dialog').forEach(m => m.style.display = 'none');
+  // Pause any playing videos when closing modal
+  document.querySelectorAll('video').forEach(v => {
+    v.pause();
+  });
 }
 
 const modalOverlay = document.getElementById('modal-overlay');
@@ -159,4 +163,18 @@ function openOppModal() {
   closeModal();
   document.getElementById('modal-overlay').style.display = 'block';
   document.getElementById('opp-modal').style.display = 'block';
+}
+
+function openVideoModal(idx) {
+  closeModal();
+  document.getElementById('modal-overlay').style.display = 'block';
+  const targetModal = document.getElementById('video-modal-' + idx);
+  if (targetModal) {
+    targetModal.style.display = 'block';
+    const videoElem = targetModal.querySelector('video');
+    if (videoElem) {
+      videoElem.currentTime = 0;
+      videoElem.play().catch(e => console.log('Autoplay prevented:', e));
+    }
+  }
 }

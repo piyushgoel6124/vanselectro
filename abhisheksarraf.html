@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abhishek Saraff — Executive Profile | VANS Electroengineering</title>
+  
+  <!-- Premium Executive Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-canvas: #f8fafc;
+      --bg-card: #ffffff;
+      --navy-950: #09131f;
+      --navy-900: #0e1c2e;
+      --navy-800: #162a45;
+      --brand-blue: #1a56db;
+      --brand-amber: #b45309;
+      --brand-amber-bg: #fffbeb;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --border-subtle: #e2e8f0;
+      --border-accent: #cbd5e1;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 8px 24px -6px rgba(15, 23, 42, 0.08);
+      --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-display: 'Space Grotesk', var(--font-body);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      background-color: var(--bg-canvas);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.5;
+    }
+
+    /* Fullscreen Viewport Wrapper */
+    .executive-shell {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding: 1.25rem 2rem;
+      max-width: 1680px;
+      margin: 0 auto;
+    }
+
+    /* Top Navigation bar */
+    .top-meta-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border-subtle);
+      flex-shrink: 0;
+    }
+
+    .org-brand {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-weight: 700;
+      color: var(--navy-800);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .org-brand-badge {
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      background: var(--brand-blue);
+      border-radius: 50%;
+    }
+
+    .director-counter {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* Two-Column Grid */
+    .viewport-grid {
+      display: grid;
+      grid-template-columns: 360px minmax(0, 1fr);
+      gap: 2rem;
+      height: calc(100% - 46px);
+      padding-top: 1.25rem;
+      overflow: hidden;
+    }
+
+    /* LEFT SIDEBAR: Pinned Executive Card */
+    .profile-hero-pane {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: var(--shadow-sm);
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .portrait-frame {
+      width: 130px;
+      height: 130px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      border: 3px solid #ffffff;
+      outline: 1px solid var(--border-accent);
+      margin-bottom: 1.25rem;
+      background-color: #e2e8f0;
+      flex-shrink: 0;
+    }
+
+    .portrait-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+    }
+
+    .director-name {
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--navy-950);
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 0.75rem;
+    }
+
+    .tag-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .badge-designation {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--brand-blue);
+      background: #eff6ff;
+      padding: 0.35rem 0.7rem;
+      border-radius: 6px;
+      line-height: 1.35;
+      border: 1px solid #dbeafe;
+      width: fit-content;
+    }
+
+    .badge-designation.honorary {
+      background: var(--brand-amber-bg);
+      color: var(--brand-amber);
+      border-color: #fef3c7;
+    }
+
+    .hero-stat-block {
+      background: #f8fafc;
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      padding: 1rem;
+      margin-top: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+    }
+
+    .stat-unit small {
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 2px;
+    }
+
+    .stat-unit strong {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--navy-900);
+    }
+
+    .download-cta {
+      margin-top: 1rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      width: 100%;
+      background: var(--navy-900);
+      color: #ffffff;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 12px rgba(14, 28, 46, 0.15);
+      flex-shrink: 0;
+    }
+
+    .download-cta:hover {
+      background: var(--brand-blue);
+      transform: translateY(-1px);
+    }
+
+    /* RIGHT CONTENT PANE: Scrollable Corporate Dossier */
+    .content-scroll-pane {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 2.25rem;
+      overflow-y: auto;
+      height: 100%;
+      box-shadow: var(--shadow-sm);
+      scrollbar-gutter: stable;
+    }
+
+    /* Hide scrollbars across elements while allowing scrolling if needed */
+    .content-scroll-pane {
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* IE and Edge */
+    }
+    .content-scroll-pane::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, Opera */
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--navy-950);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .section-title::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--border-subtle);
+    }
+
+    .executive-lead-text {
+      font-size: 0.96rem;
+      line-height: 1.65;
+      color: #334155;
+      margin-bottom: 2rem;
+    }
+
+    /* Multi-card Grid */
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .card-tile {
+      background: #fcfcfd;
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      padding: 1.25rem;
+      transition: border-color 0.2s;
+    }
+
+    .card-tile:hover {
+      border-color: var(--border-accent);
+    }
+
+    .card-tile-title {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--navy-900);
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .card-tile-title svg {
+      color: var(--brand-blue);
+      flex-shrink: 0;
+    }
+
+    .feature-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .feature-list li {
+      position: relative;
+      padding-left: 1.1rem;
+      font-size: 0.84rem;
+      line-height: 1.45;
+      color: #475569;
+    }
+
+    .feature-list li::before {
+      content: "▪";
+      position: absolute;
+      left: 0;
+      color: var(--brand-blue);
+      font-size: 1.1rem;
+      line-height: 1;
+      top: -1px;
+    }
+
+    /* Experience Timeline */
+    .timeline-block {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .experience-node {
+      border-left: 2px solid var(--border-subtle);
+      padding-left: 1.25rem;
+      position: relative;
+    }
+
+    .experience-node::before {
+      content: "";
+      position: absolute;
+      left: -5px;
+      top: 4px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--navy-800);
+    }
+
+    .experience-header {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--navy-950);
+      margin-bottom: 0.4rem;
+    }
+
+    .experience-sub {
+      font-weight: 500;
+      color: var(--brand-blue);
+    }
+
+    /* Bottom Dual Modules */
+    .bottom-row-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      padding-top: 0.5rem;
+    }
+
+    .enterprise-link-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.45rem;
+    }
+
+    .enterprise-link-list a {
+      font-size: 0.84rem;
+      color: var(--navy-900);
+      text-decoration: none;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.5rem 0.75rem;
+      background: #f8fafc;
+      border: 1px solid var(--border-subtle);
+      border-radius: 6px;
+      transition: all 0.15s ease;
+    }
+
+    .enterprise-link-list a:hover {
+      background: #f1f5f9;
+      color: var(--brand-blue);
+      border-color: #cbd5e1;
+      padding-left: 0.95rem;
+    }
+
+    /* Responsive Adaptation for Tablets and Mobile */
+    @media (max-width: 1024px) {
+      .viewport-grid {
+        grid-template-columns: 320px 1fr;
+        gap: 1.25rem;
+      }
+    }
+
+    @media (max-width: 860px) {
+      html, body {
+        height: auto;
+      }
+      .executive-shell {
+        height: auto;
+        padding: 1rem;
+      }
+      .viewport-grid {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        overflow: visible;
+      }
+      .profile-hero-pane {
+        height: auto;
+      }
+      .content-scroll-pane {
+        height: auto;
+        overflow: visible;
+        padding: 1.5rem;
+      }
+      .expertise-grid,
+      .bottom-row-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="executive-shell">
+    
+    <!-- Top Corporate Navigation Header -->
+    <header class="top-meta-nav">
+      <div class="org-brand">
+        <span class="org-brand-badge"></span>
+        VANS Electroengineering &mdash; Board of Directors
+      </div>
+    </header>
+
+    <!-- Main Viewport Dual-Layout -->
+    <main class="viewport-grid">
+      
+      <!-- LEFT COL: Fixed Executive Profile Snapshot -->
+      <aside class="profile-hero-pane">
+        <div>
+          <div class="portrait-frame">
+            <!-- Replace image src with the actual director image path -->
+            <img src="img/abhishek saraf.jpg" alt="Abhishek Saraff portrait">
+          </div>
+
+          <h1 class="director-name">Abhishek Saraff</h1>
+          
+          <div class="tag-stack">
+            <a href="https://in.linkedin.com/company/arillko" target="_blank" rel="noopener" class="badge-designation" style="text-decoration: none;">Managing Director, Avadh Rail Infra Ltd.</a>
+            <a href="https://www.cii.in/states.aspx" target="_blank" rel="noopener" class="badge-designation honorary" style="text-decoration: none;">Chairman, CII Uttar Pradesh (2025–26)</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="hero-stat-block">
+            <div class="stat-unit">
+              <small>Group Scale</small>
+              <strong>~₹600 Cr</strong>
+            </div>
+            <div class="stat-unit">
+              <small>Expansion</small>
+              <strong>~500%</strong>
+            </div>
+          </div>
+
+          <a href="pdf/Abhishek_Saraff_Executive_Profile_Vans_Background.pdf" target="_blank" rel="noopener" class="download-cta">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Executive Dossier (PDF)
+          </a>
+        </div>
+      </aside>
+
+      <!-- RIGHT COL: Scrollable Executive Details & Evidence -->
+      <section class="content-scroll-pane">
+        
+        <!-- Section 1: Executive Summary -->
+        <h2 class="section-title">Executive Summary</h2>
+        <p class="executive-lead-text">
+          Industrial leader and Managing Director of <strong><a href="https://in.linkedin.com/company/arillko" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline;">Avadh Rail Infra Ltd.</a></strong>, bringing proven executive leadership across rail infrastructure, advanced electrification, and systems engineering. Under his stewardship, the enterprise achieved approximately <strong>500% growth</strong>, with annual turnover scaling to nearly <strong>₹600 crore</strong>, evolving Avadh Rail Infra into an integrated, technology-led rail solutions provider.
+        </p>
+
+        <!-- Section 2: Core Sectoral Expertise (2-Col Grid) -->
+        <h2 class="section-title">Core Sectoral Expertise</h2>
+        <div class="expertise-grid">
+          <div class="card-tile">
+            <div class="card-tile-title">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              Railway Infrastructure & Operations
+            </div>
+            <ul class="feature-list">
+              <li>Critical & safety-critical components for Indian Railways</li>
+              <li>Rolling stock, Overhead Electrification (OHE), and track systems</li>
+              <li>Semi-high-speed, high-speed, and urban metro rail networks</li>
+              <li>Integrated rail infrastructure & specialized civil solutions</li>
+            </ul>
+          </div>
+
+          <div class="card-tile">
+            <div class="card-tile-title">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              Strategic Growth & Global Business
+            </div>
+            <ul class="feature-list">
+              <li>Global partnerships across USA, Germany, France, China, Russia, and Australia</li>
+              <li>Enterprise scale-up, diversification, and multi-facility governance</li>
+              <li>Operational excellence, lean manufacturing, & technology integration</li>
+              <li>Public advocacy and institutional policy leadership</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Section 3: Leadership & Executive Experience -->
+        <h2 class="section-title">Leadership & Executive Experience</h2>
+        <div class="timeline-block">
+          
+          <div class="experience-node">
+            <div class="experience-header">
+              Avadh Rail Infra Ltd. <span class="experience-sub">— Managing Director (Present)</span>
+            </div>
+            <ul class="feature-list">
+              <li>Directs corporate vision, manufacturing operations, advanced technology acquisition, and group-wide expansion for an engineering institution established in 1977.</li>
+              <li>Engineered a ~500% business expansion, taking group annual revenue to nearly ₹600 crore through strategic diversification across Rolling Stock, OHE, Track, and Civil Infrastructure.</li>
+              <li>Fosters global technology transfers and joint collaborations with industrial partners across the USA, Germany, France, China, Russia, and Australia.</li>
+            </ul>
+          </div>
+
+          <div class="experience-node">
+            <div class="experience-header">
+              Confederation of Indian Industry (CII) <span class="experience-sub">— Chairman, Uttar Pradesh (2025–2026)</span>
+            </div>
+            <ul class="feature-list">
+              <li>Spearheads state-level industrial strategy, policy advocacy, and economic investment engagement across key infrastructure and engineering sectors in Uttar Pradesh.</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Section 4: Education & Group Umbrella -->
+        <div class="bottom-row-grid">
+          
+          <div>
+            <h2 class="section-title">Education & Credentials</h2>
+            <div class="card-tile">
+              <strong style="display:block; font-size: 0.9rem; color: var(--navy-900);">M.S. in International Business</strong>
+              <span style="font-size: 0.82rem; color: var(--text-muted);">University of Kansas, USA (2001)</span>
+            </div>
+          </div>
+
+          <div>
+            <h2 class="section-title">Group Umbrella Enterprises</h2>
+            <ul class="enterprise-link-list">
+              <li><a href="http://www.novius.co.in" target="_blank" rel="noopener">Novius Technologies India Pvt. Ltd. <span>&rarr;</span></a></li>
+              <li><a href="http://www.avadhtechnometals.com" target="_blank" rel="noopener">Avadh Technometals Pvt. Ltd. <span>&rarr;</span></a></li>
+              <li><a href="http://www.vanselectroengineerings.com" target="_blank" rel="noopener">VANS Electroengineerings <span>&rarr;</span></a></li>
+              <li><a href="https://www.linkedin.com/company/atpl-lko/?originalSubdomain=in" target="_blank" rel="noopener">Atlantic Tradeengineers LLP <span>&rarr;</span></a></li>
+              <li><a href="http://www.pullman.in" target="_blank" rel="noopener">Pullman Engineering Co. Pvt. Ltd. <span>&rarr;</span></a></li>
+              <li><a href="http://www.primaxequipment.com" target="_blank" rel="noopener">Primax Industry Pvt. Ltd. <span>&rarr;</span></a></li>
+            </ul>
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+  </div>
+
+</body>
+</html>

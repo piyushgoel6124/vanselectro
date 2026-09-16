@@ -67,6 +67,7 @@ html, body {
 /* Main Full-Width Dynamic 11:4 Dashboard Layout */
 .dashboard {
   --map-header-space: 88px;
+  container-type: size;
   width: min(220vh, calc(100vw - 32px));
   max-width: 220vh;
   max-height: 80vh;
@@ -161,7 +162,7 @@ html, body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  width: calc(72.7% - (var(--map-header-space) * 2));
+  width: calc(2 * (100cqh - 96px));
   flex-shrink: 0;
   box-sizing: border-box;
 }

@@ -21,7 +21,9 @@
 
 html, body {
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   font-family: 'Segoe UI', 'Inter', Arial, sans-serif;
   background: var(--bg);
   color: var(--text);
@@ -64,14 +66,14 @@ html, body {
   transform: translateY(-1px);
 }
 
-/* Main Full-Width Dynamic 11:4 Dashboard Layout */
+/* Main Full-Width Dynamic Dashboard Layout */
 .dashboard {
   --map-header-space: 88px;
   container-type: size;
-  width: min(220vh, calc(100vw - 32px));
-  max-width: 220vh;
-  max-height: 80vh;
-  aspect-ratio: 11 / 4;
+  width: min(214vh, calc(100vw - 32px));
+  max-width: 214vh;
+  max-height: 85vh;
+  aspect-ratio: 2.38 / 1;
   margin: 0 auto;
   padding: 16px 20px;
   display: flex;
@@ -92,63 +94,57 @@ html, body {
   }
 }
 
-/* Bottom 3 Button Action Bar */
-.bottom-bar {
-  width: min(150vh, calc(100vw - 160px));
-  max-width: 1200px;
-  margin: 28px auto 20px auto;
+/* Action Buttons inside map-section (at bottom) */
+.map-action-bar {
+  margin-top: 12px;
+  flex-shrink: 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+  gap: 12px;
+  width: 100%;
   box-sizing: border-box;
 }
 
-.bottom-btn {
+.map-action-bar .bottom-btn {
   background: linear-gradient(135deg, #ffffff 0%, #F0F5FA 100%);
   border: 2px solid var(--border);
   border-radius: 14px;
-  padding: 18px 24px;
-  min-height: 58px;
+  padding: 14px 10px;
+  min-height: 84px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 8px;
   cursor: pointer;
   box-shadow: var(--shadow-sm);
   transition: all 0.25s ease;
   color: var(--primary);
   font-family: 'Outfit', sans-serif;
-  font-size: 16px;
+  font-size: 13.5px;
   font-weight: 700;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.2px;
+  text-align: center;
   box-sizing: border-box;
+  width: 100%;
 }
 
-.bottom-btn:hover {
+.map-action-bar .bottom-btn:hover {
   background: var(--primary);
   color: #ffffff;
   border-color: var(--primary-dark);
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
 
-.bottom-btn svg {
+.map-action-bar .bottom-btn svg {
   flex-shrink: 0;
   transition: transform 0.2s ease;
 }
 
-.bottom-btn:hover svg {
+.map-action-bar .bottom-btn:hover svg {
   transform: scale(1.15);
   stroke: #ffffff;
-}
-
-@media (max-width: 900px) {
-  .bottom-bar {
-    width: calc(100vw - 32px);
-    grid-template-columns: 1fr;
-    gap: 12px;
-    margin: 18px auto 16px auto;
-  }
 }
 
 /* Left Side: Logo, Title & Map */
@@ -162,7 +158,7 @@ html, body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  width: calc(2 * (100cqh - 96px));
+  width: calc(2 * (100cqh - 192px));
   flex-shrink: 0;
   box-sizing: border-box;
 }
@@ -754,6 +750,41 @@ html, body {
 
 .modal-dialog .pdf-link:hover {
   background: var(--primary-dark);
+}
+
+/* Main Footer (Deep Blue, Top Orange Border, Centered Text & Link - Sticky Bottom) */
+.main-footer {
+  margin-top: auto;
+  background: var(--primary);
+  border-top: 3.5px solid var(--accent);
+  color: #ffffff;
+  padding: 10px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12.5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.main-footer p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  text-align: center;
+}
+
+.main-footer a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
+
+.main-footer a:hover {
+  color: #FFA64D;
+  text-decoration: underline;
 }
 
 

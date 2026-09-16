@@ -162,7 +162,24 @@ function openProfile(idx) {
 function openOppModal() {
   closeModal();
   document.getElementById('modal-overlay').style.display = 'block';
-  document.getElementById('opp-modal').style.display = 'block';
+  document.getElementById('opp-modal').style.display = 'flex';
+}
+
+function openImageModal(src, title, w = 3996, h = 2250) {
+  closeModal();
+  const modal = document.getElementById('image-viewer-modal');
+  if (modal) {
+    const img = document.getElementById('image-viewer-img');
+    if (img) {
+      img.src = src;
+      img.alt = title || '';
+      img.style.maxWidth = `calc(100vh * (${w} / ${h}))`;
+      img.style.maxHeight = `calc(100vw * (${h} / ${w}))`;
+      img.style.aspectRatio = `${w} / ${h}`;
+    }
+    document.getElementById('modal-overlay').style.display = 'block';
+    modal.style.display = 'flex';
+  }
 }
 
 function openVideoModal(idx) {

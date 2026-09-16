@@ -38,7 +38,7 @@
       <!-- SVG Map Canvas -->
       <div class="map-container" id="mapContainer">
         <!-- Embedded World Map loaded from map.svg -->
-        <div id="map-loading" style="display:flex;align-items:center;justify-content:center;height:100%;min-height:350px;color:var(--text-muted);font-weight:600;">Loading interactive map...</div>
+        <div id="map-loading" style="display:flex;align-items:center;justify-content:center;height:100%;min-height:315px;color:var(--text-muted);font-weight:600;">Loading interactive map...</div>
 
         <!-- Side Info Panel Overlay -->
         <div id="info-panel">
@@ -54,21 +54,46 @@
       <!-- Panel 1: PRODUCTS -->
       <section class="panel-card">
         <h2>PRODUCTS</h2>
-        <div class="products-banner-wrapper">
-          <img src="img/prods.png" alt="Products" class="products-img">
-          <div class="play-hotspot-grid">
-            <button class="play-btn-circle" onclick="openVideoModal(0)" title="Play VCB WSR Video" aria-label="Play VCB WSR Video">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="#ffffff"><polygon points="6,3 20,12 6,21"></polygon></svg>
-            </button>
-            <button class="play-btn-circle" onclick="openVideoModal(1)" title="Play VCB OBR Video" aria-label="Play VCB OBR Video">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="#ffffff"><polygon points="6,3 20,12 6,21"></polygon></svg>
-            </button>
-            <button class="play-btn-circle" onclick="openVideoModal(2)" title="Play VANS RMU Video" aria-label="Play VANS RMU Video">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="#ffffff"><polygon points="6,3 20,12 6,21"></polygon></svg>
-            </button>
-            <button class="play-btn-circle" onclick="openVideoModal(3)" title="Play VANS VI Video" aria-label="Play VANS VI Video">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="#ffffff"><polygon points="6,3 20,12 6,21"></polygon></svg>
-            </button>
+        <div class="inner-grid">
+          <div class="item-card video-card" onclick="openVideoModal(0)" title="Play VCB WSR Video">
+            <div class="video-thumb-container">
+              <img src="img/thumb_vcb_wsr.jpg" alt="VCB WSR">
+              <span class="video-play-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#ffffff"><polygon points="6,3 20,12 6,21"></polygon></svg>
+              </span>
+            </div>
+            <div class="card-title">VCB WSR</div>
+            <div class="card-subtitle">Way Side Relay</div>
+          </div>
+          <div class="item-card video-card" onclick="openVideoModal(1)" title="Play VCB OBR Video">
+            <div class="video-thumb-container">
+              <img src="img/thumb_vcb_obr.jpg" alt="VCB OBR">
+              <span class="video-play-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#ffffff"><polygon points="6,3 20,12 6,21"></polygon></svg>
+              </span>
+            </div>
+            <div class="card-title">VCB OBR</div>
+            <div class="card-subtitle">On Board Relay</div>
+          </div>
+          <div class="item-card video-card" onclick="openVideoModal(2)" title="Play VANS RMU Video">
+            <div class="video-thumb-container">
+              <img src="img/thumb_vans_rmu.jpg" alt="VANS RMU">
+              <span class="video-play-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#ffffff"><polygon points="6,3 20,12 6,21"></polygon></svg>
+              </span>
+            </div>
+            <div class="card-title">VANS RMU</div>
+            <div class="card-subtitle">Ring Main Unit</div>
+          </div>
+          <div class="item-card video-card" onclick="openVideoModal(3)" title="Play VANS VI Video">
+            <div class="video-thumb-container">
+              <img src="img/thumb_vans_vi.jpg" alt="VANS VI">
+              <span class="video-play-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#ffffff"><polygon points="6,3 20,12 6,21"></polygon></svg>
+              </span>
+            </div>
+            <div class="card-title">VANS VI</div>
+            <div class="card-subtitle">Vacuum Interrupter</div>
           </div>
         </div>
       </section>
@@ -103,19 +128,19 @@
       <!-- Panel 3: SECURED VANS MARKET -->
       <section class="panel-card" onclick="openOppModal()" style="cursor: pointer;">
         <h2>SECURED VANS MARKET</h2>
-        <img src="img/vansopp.jpg" alt="VANS Opportunity Plan" style="width: 100%; height: 175px; object-fit: cover; border-radius: 12px; margin-bottom: 8px;">
+        <img src="img/vansopp.jpg" alt="VANS Opportunity Plan" style="width: 100%; height: auto; flex: 1; min-height: 0; object-fit: cover; border-radius: 12px; margin-bottom: 6px;">
         <div class="card-title" style="text-align: center;">VANS OPPORTUNITY PLAN</div>
       </section>
 
       <!-- Panel 4: UPCOMING PRODUCTS -->
       <section class="panel-card">
         <h2>UPCOMING PRODUCTS</h2>
-        <div style="display: flex; gap: 12px; flex: 1;">
-          <a href="pdf/Ring Main Unit Market Analysis and Forecast, 2019-2034 (1) (1).pdf" target="_blank" rel="noopener" class="item-card product" style="flex: 1;">
+        <div style="display: flex; gap: 10px; flex: 1; min-height: 0;">
+          <a href="pdf/Ring Main Unit Market Analysis and Forecast, 2019-2034 (1) (1).pdf" target="_blank" rel="noopener" class="item-card product" style="flex: 1; height: 100%;">
             <img src="img/prod_rmu.png" alt="Ring Main Unit Market Report">
             <div class="card-title">RING MAIN<br>UNIT (RMU)</div>
           </a>
-          <a href="pdf/India_Vacuum_Interrupter_Market_Report_2019-2034 (1).pdf" target="_blank" rel="noopener" class="item-card product" style="flex: 1;">
+          <a href="pdf/India_Vacuum_Interrupter_Market_Report_2019-2034 (1).pdf" target="_blank" rel="noopener" class="item-card product" style="flex: 1; height: 100%;">
             <img src="img/prod_vaccuminterpreter.png" alt="Vacuum Interrupter Market Report">
             <div class="card-title">VACUUM<br>INTERRUPTER</div>
           </a>
@@ -126,20 +151,41 @@
 
   </div>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2026 VANS Electroengineerings Limited. All rights reserved. Visit <a href="https://vanselectroengineerings.com/" target="_blank">vanselectroengineerings.com</a></p>
-  </footer>
+  <!-- Bottom Action Bar (3 Image Modals) -->
+  <div class="bottom-bar">
+    <button class="bottom-btn" onclick="openImageModal('img/8.jpg', 'Financial Highlights')">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"></line><line x1="18" y1="20" x2="18" y2="4"></line><line x1="6" y1="20" x2="6" y2="16"></line></svg>
+      Financial Highlights
+    </button>
+    <button class="bottom-btn" onclick="openImageModal('img/9.jpg', 'Growth Trajectory')">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+      Growth Trajectory
+    </button>
+    <button class="bottom-btn" onclick="openImageModal('img/10.jpg', 'Margin Story')">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 5H7h3a4 4 0 0 1 0 8H7l6 6"></path><path d="M7 9h11"></path></svg>
+      Margin Story
+    </button>
+  </div>
+
+
 
   <!-- Modal Backdrop & Dialogs -->
   <div class="modal-overlay" id="modal-overlay"></div>
 
   <!-- Opportunity Plan Modal -->
-  <div class="modal-dialog" id="opp-modal" style="width: 100vw; max-width: 100vw; height: 100vh; max-height: 100vh; top: 0; left: 0; transform: none; border-radius: 0; padding: 0; margin: 0; display: none; background: #ffffff; overflow: hidden; position: fixed; z-index: 1000;">
+  <div class="modal-dialog" id="opp-modal" onclick="closeModal()" style="width: 100vw; max-width: 100vw; height: 100vh; max-height: 100vh; top: 0; left: 0; transform: none; border-radius: 0; padding: 0; margin: 0; display: none; background: #ffffff; overflow: hidden; position: fixed; z-index: 1000; align-items: center; justify-content: center; cursor: pointer;">
     <button class="close-modal" onclick="closeModal()" aria-label="Close" style="z-index: 1001; position: absolute; top: 18px; right: 22px; background: rgba(13, 40, 122, 0.85); color: #ffffff; width: 44px; height: 44px; border-radius: 50%; border: none; display: flex; align-items: center; justify-content: center; cursor: pointer; padding: 0; margin: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.25); transition: background 0.2s ease;">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
     </button>
-    <img src="img/vansopp.jpg" alt="VANS Opportunity Plan" style="width: 100vw; height: 100vh; object-fit: contain; display: block; margin: 0; padding: 0; background: #ffffff;">
+    <img src="img/vansopp.jpg" alt="VANS Opportunity Plan" onclick="event.stopPropagation()" style="width: 100vw; height: 100vh; max-width: calc(100vh * (1280 / 853)); max-height: calc(100vw * (853 / 1280)); aspect-ratio: 1280 / 853; object-fit: contain; display: block; margin: 0; padding: 0; background: #ffffff; cursor: default;">
+  </div>
+
+  <!-- Generic Image Viewer Modal (for 8.jpg, 9.jpg, 10.jpg) -->
+  <div class="modal-dialog" id="image-viewer-modal" onclick="closeModal()" style="width: 100vw; max-width: 100vw; height: 100vh; max-height: 100vh; top: 0; left: 0; transform: none; border-radius: 0; padding: 0; margin: 0; display: none; background: #ffffff; overflow: hidden; position: fixed; z-index: 1000; align-items: center; justify-content: center; cursor: pointer;">
+    <button class="close-modal" onclick="closeModal()" aria-label="Close" style="z-index: 1001; position: absolute; top: 18px; right: 22px; background: rgba(13, 40, 122, 0.85); color: #ffffff; width: 44px; height: 44px; border-radius: 50%; border: none; display: flex; align-items: center; justify-content: center; cursor: pointer; padding: 0; margin: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.25); transition: background 0.2s ease;">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+    <img id="image-viewer-img" src="" alt="" onclick="event.stopPropagation()" style="width: 100vw; height: 100vh; max-width: calc(100vh * (3996 / 2250)); max-height: calc(100vw * (2250 / 3996)); aspect-ratio: 3996 / 2250; object-fit: contain; display: block; margin: 0; padding: 0; background: #ffffff; cursor: default;">
   </div>
 
   <!-- Product Video Modals -->
@@ -364,6 +410,13 @@
     <ul>
       <li>Runs operations and expansion of a Class-A foundry in Haridwar producing up to 450 MT/month of precision-engineered components.</li>
       <li>Led production of coach and locomotive castings supplied to Indian Railways, defence, automotive and heavy industrial sectors.</li>
+    </ul>
+
+    <p><b><a href="https://ductusinfodot.com" target="_blank" rel="noopener" style="color: #0D287A; text-decoration: underline;">Ductus Infodot Private Limited</a></b> &mdash; Director (2024 &ndash; Present)</p>
+    <ul>
+      <li>Spearheads the development of India's most advanced diagnostic car for Overhead Equipment (OHE) inspection for Indian Railways &mdash; positioning the venture among the first emerging players in a segment with an addressable market of over &#8377;10,000 crore.</li>
+      <li>Leads engineering of a fully integrated inspection system that performs high-speed, multi-parameter diagnostics of both OHE and track infrastructure, serving Indian Railways mainline and metro networks.</li>
+      <li>Drives product development, strategic technology partnerships, and commercialization to scale the diagnostic platform across the Indian Railways and metro electrification ecosystem.</li>
     </ul>
 
     <a class="pdf-link" target="_blank" rel="noopener" href="pdf/Viraj_Bansal_Executive_Profile_With_Photo_v2.pdf">Download Executive Profile PDF</a>
